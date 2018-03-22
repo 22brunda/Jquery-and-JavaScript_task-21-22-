@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script>
+        $(document).ready(function(){
+
+        $('button').click(function () {
+
+            var total = 0;
+
+            $(':checkbox:checked.demo').each(function () {
+                debugger;
+                total += +this.value;
+
+            });
+
+           document.write(total);
+
+        });
+
+        $("#sel").click(function () {
+                $(".demo").each(function(){
+                debugger;
+                this.checked = true;
+
+            });
+            });
+
+             $("#right").click(function () {
+                $(".demo").each(function(){
+                debugger;
+                this.checked = false;
+            });
+            });
+    });
+
+       
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="checkbox" class="demo" value="10"/>10
+      <input type="checkbox" class="demo" value="30"/>30
+      <input type="checkbox" class="demo" value="50"/>50
+      <input type="checkbox" class="demo" value="100"/>100
+      <input type="checkbox" class="demo" value="130"/>130
+      <input type="checkbox" class="demo" value="150"/>150
+      <button type="button">unselect all</button>
+      <button type="button">select all</button>
+      <button type="button">submit</button>
+    </div>
+  </body>
+</html>
+    
